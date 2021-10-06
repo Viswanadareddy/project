@@ -20,12 +20,10 @@ class SearchWidget extends StatelessWidget {
               ),
               filled: true,
               prefixIcon:
-                  Icon(FontAwesomeIcons.search, color: AppColorsConst.black),
-              fillColor: AppColorsConst.secondaryColor,
-              suffixIcon:
-                  Icon(FontAwesomeIcons.sort, color: AppColorsConst.black),
+                  Icon(FontAwesomeIcons.search, color: AppColorsConst.white),
+              fillColor: Colors.blueGrey[900],
               hintText: StringConstant.SEARCH,
-              hintStyle: new TextStyle(color: AppColorsConst.searchHintColor)),
+              hintStyle: new TextStyle(color: AppColorsConst.white)),
         ));
   }
 }

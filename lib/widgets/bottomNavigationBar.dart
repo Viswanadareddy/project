@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:restaurant/values/values.dart';
+import 'package:project/values/values.dart';
 
 class BottomBarNavigation extends StatefulWidget {
   const BottomBarNavigation({Key? key}) : super(key: key);
