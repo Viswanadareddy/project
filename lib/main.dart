@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_settings_screens/flutter_settings_screens.dart';
 import 'package:project/pages/login.dart';
 import 'package:project/pages/setting.dart';
+import 'package:project/pages/profile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => MaterialApp(
-          home: LoginPage(),
+          home: Profile(),
           title: 'Flutter Demo',
           debugShowCheckedModeBanner: false,
           themeMode: ThemeMode.dark,
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
             //'notifications': (context) => Notifications(),
             //'favourite': (context) => Favourites(),
             'login': (context) => LoginPage(),
+            'profile': (context) => Profile(),
             //'products': (context) => ProductListPage(),
             //'products_detail': (context) => ProductDetailsPage(),
           });

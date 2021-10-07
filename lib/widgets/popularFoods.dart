@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:restaurant/values/values.dart';
+import 'package:project/values/values.dart';
 
 class PopularFoodWidget extends StatefulWidget {
   const PopularFoodWidget({Key? key}) : super(key: key);

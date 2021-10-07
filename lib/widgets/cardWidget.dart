@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:restaurant/values/values.dart';
+import 'package:project/values/values.dart';
 
 class CardWidget extends StatelessWidget {
   late final String title;
