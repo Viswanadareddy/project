@@ -2,8 +2,11 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_settings_screens/flutter_settings_screens.dart';
 import 'package:project/pages/login.dart';
+import 'package:project/pages/notifications.dart';
+import 'package:project/pages/register.dart';
 import 'package:project/pages/setting.dart';
 import 'package:project/pages/profile.dart';
+import 'package:project/unbording/MyHomePage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,19 +17,40 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => MaterialApp(
-          home: Profile(),
-          title: 'Flutter Demo',
-          debugShowCheckedModeBanner: false,
-          themeMode: ThemeMode.dark,
-          routes: {
-            'setting': (context) => Setting(),
-            //'notifications': (context) => Notifications(),
-            //'favourite': (context) => Favourites(),
-            'login': (context) => LoginPage(),
-            'profile': (context) => Profile(),
-            //'products': (context) => ProductListPage(),
-            //'products_detail': (context) => ProductDetailsPage(),
-          });
+        home: LoginPage(),
+        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        //themeMode: ThemeMode.dark,
+        routes: {
+          'setting': (context) => Setting(),
+          'notifications': (context) => MultiSwitch(),
+          //'favourite': (context) => Favourites(),
+          'login': (context) => LoginPage(),
+          'register': (context) => RegisterPage(),
+          'profile': (context) => Profile(),
+          //'products': (context) => ProductListPage(),
+          //'products_detail': (context) => ProductDetailsPage(),
+        },
+        theme: ThemeData(
+            primarySwatch: Colors.blue,
+            primaryColor: Colors.redAccent,
+            visualDensity: VisualDensity.adaptivePlatformDensity,
+            textTheme: TextTheme(
+                headline1: TextStyle(
+                  fontSize: 40.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+                headline5: TextStyle(
+                    fontSize: 14.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue[700]),
+                bodyText1: TextStyle(
+                    fontSize: 14.0,
+                    fontWeight: FontWeight.normal,
+                    color: Colors.white),
+                bodyText2: TextStyle(fontSize: 20.0, color: Colors.white))),
+      );
 }
 
 /*class MyHomePage extends StatefulWidget {
@@ -80,7 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }*/
 
-class MyHomePage extends StatelessWidget {
+/*class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key}) : super(key: key);
 
   @override
@@ -90,4 +114,4 @@ class MyHomePage extends StatelessWidget {
     });
     return Container();
   }
-}
+}*/

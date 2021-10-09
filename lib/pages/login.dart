@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project/values/values.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -14,7 +15,12 @@ class _LoginPageState extends State<LoginPage> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          SizedBox(height: 400),
+          SizedBox(height: 250),
+          Center(
+            child: Image.asset('assets/knife_logo_purple.jpg',
+                height: 60, width: 60),
+          ),
+          SizedBox(height: 5),
           Center(
             child: Text(
               'WELCOME BACK!',
@@ -25,59 +31,73 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
           Center(
-            child: TextField(
-              style: TextStyle(color: Colors.black),
-              decoration: InputDecoration(
-                prefixIcon: Container(
-                  child: Icon(
-                    Icons.email_outlined,
-                    color: Colors.white,
-                  ),
+            child: Container(
+              width: 340,
+              height: 80,
+              child: TextField(
+                style: TextStyle(color: Colors.white),
+                decoration: InputDecoration(
+                  prefixIcon: Container(
+                      //padding: EdgeInsets.fromLTRB(30, 10, 0, 10),
+                      //color: Colors.blueAccent,
+                      child: Icon(
+                        Icons.email_outlined,
+                        color: Colors.white,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.lightBlueAccent,
+                        border: Border.all(color: Colors.black38, width: 10),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      padding: EdgeInsets.fromLTRB(5, 0, 0, 0)),
                   //color: Colors.blue,
-                  decoration: BoxDecoration(
+                  /* decoration: BoxDecoration(
                     color: Colors.lightBlueAccent,
-                    border: Border.all(width: 0.1),
-                    borderRadius: BorderRadius.circular(0.1),
+                    border: Border.all(width: 0),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),*/
+                  hintText: 'Email Adress',
+                  hintStyle: TextStyle(color: Colors.white),
+                  fillColor: Colors.black38,
+                  filled: true,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
                   ),
                 ),
-                hintText: 'Email Adress',
-                fillColor: Colors.white70,
-                filled: true,
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(5),
-                        topRight: Radius.circular(5),
-                        bottomLeft: Radius.circular(5),
-                        bottomRight: Radius.circular(5))),
               ),
             ),
           ),
           SizedBox(height: 10),
           Center(
-            child: TextField(
-              style: TextStyle(color: Colors.black),
-              decoration: InputDecoration(
-                prefixIcon: Container(
-                  child: Icon(
-                    Icons.lock_outline_rounded,
-                    color: Colors.white,
+            child: Container(
+              width: 340,
+              height: 80,
+              child: TextField(
+                style: TextStyle(color: Colors.white),
+                decoration: InputDecoration(
+                  //fillColor: Colors.grey[900],
+                  //filled:true,
+                  prefixIcon: Container(
+                    child: Icon(
+                      Icons.lock_outline_rounded,
+                      color: Colors.white,
+                    ),
+                    //color: Colors.blue,
+                    //padding: EdgeInsets.symmetric(horizontal: 2),
+                    decoration: BoxDecoration(
+                      color: Colors.lightBlueAccent,
+                      // border: Border.all(width: 5),
+                      borderRadius: BorderRadius.circular(15),
+                    ),
                   ),
-                  //color: Colors.blue,
-                  decoration: BoxDecoration(
-                    color: Colors.lightBlueAccent,
-                    border: Border.all(width: 0.1),
-                    borderRadius: BorderRadius.circular(0.1),
-                  ),
+                  hintText: 'Password',
+                  hintStyle: TextStyle(color: Colors.white),
+                  fillColor: Colors.black38,
+                  filled: true,
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15)),
                 ),
-                hintText: 'Password',
-                fillColor: Colors.white70,
-                filled: true,
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(5),
-                        topRight: Radius.circular(5),
-                        bottomLeft: Radius.circular(5),
-                        bottomRight: Radius.circular(5))),
               ),
             ),
           ),
@@ -102,18 +122,33 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
           Center(
-            child: Text(
+            child: TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, 'register');
+                },
+                child: Text(
+                  'I haven\'t an account ',
+                  style: TextStyle(
+                      fontSize: 18, decoration: TextDecoration.underline),
+                  textAlign: TextAlign.center,
+                )),
+          ),
+        ],
+      ),
+      backgroundColor: Colors.grey[900],
+    );
+  }
+}
+
+
+
+
+
+                                     /*       Text(
               'I haven\'t an account ',
               style: TextStyle(
                   fontSize: 14,
                   decoration: TextDecoration.underline,
                   color: Colors.white),
               textAlign: TextAlign.center,
-            ),
-          ),
-        ],
-      ),
-      backgroundColor: Colors.black,
-    );
-  }
-}
+            ),*/
