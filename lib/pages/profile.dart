@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:project/theme.dart';
 
@@ -18,9 +20,9 @@ class Profile extends StatelessWidget {
                     CircleAvatar(
                       backgroundImage: AssetImage('assets/profile_image.jpeg'),
                       minRadius: 30,
-                      backgroundColor: white,
+                      //backgroundColor: white,
                     ),
-                    SizedBox(width: 10),
+                    SizedBox(width: 15),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -29,40 +31,48 @@ class Profile extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w600,
-                            color: Colors.white,
+                            color: Colors.white70,
                           ),
                         ),
-                        Text('Dwa@son.com',
-                            style: TextStyle(color: Colors.white)),
+                        Text(
+                          'Dwa@son.com',
+                          style: TextStyle(
+                              color: Colors.white70,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500),
+                        ),
                       ],
                     ),
                   ],
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 15),
               SizedBox(
-                width: 350,
-                //height: 40,
+                width: 330,
+                height: 50,
                 child: RawMaterialButton(
                   onPressed: () {},
-                  padding: EdgeInsets.all(5),
-                  fillColor: Colors.blue,
+                  fillColor: Colors.indigoAccent[400],
                   child: Row(
                     children: [
                       Expanded(
                         child: ListTile(
-                          contentPadding: EdgeInsets.symmetric(),
+                          //contentPadding: EdgeInsets.symmetric(),
                           leading: Icon(
                             Icons.info_outline_rounded,
                             color: Colors.white,
                           ),
                           title: Text(
                             'Gold member',
-                            style: TextStyle(color: Colors.amber[600]),
+                            style: TextStyle(color: Colors.amber[300]),
                           ),
                           trailing: Text(
                             'Upgrade',
-                            style: TextStyle(color: Colors.white),
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500,
+                            ),
                           ),
                         ),
                       ),
@@ -72,37 +82,54 @@ class Profile extends StatelessWidget {
               ),
               SizedBox(height: 15),
               Container(
-                padding: EdgeInsets.all(5),
+                padding: EdgeInsets.all(1),
                 decoration: BoxDecoration(
                     color: Colors.grey[900],
                     borderRadius: BorderRadius.all(Radius.circular(20))),
                 //height:
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
                     Row(
                       children: <Widget>[
                         Text(
                           'Account balance',
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(
+                              color: Colors.white70,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500),
                         ),
                         Spacer(),
                         Text(
                           '\$ 50.00',
-                          style: TextStyle(color: Colors.indigoAccent[700]),
+                          style: TextStyle(
+                              color: Colors.indigoAccent[700],
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500),
                         ),
                       ],
                     ),
+                    SizedBox(height: 10),
                     Row(
+                      //crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Text(
                               'Refer Friends',
-                              style: TextStyle(color: Colors.white),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500),
                             ),
                             Text(
-                              'Earn \$100.00',
-                              style: TextStyle(color: Colors.indigoAccent[700]),
+                              'Earn \$100',
+                              style: TextStyle(
+                                color: Colors.indigoAccent[700],
+                                fontSize: 15,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
                           ],
                         ),
@@ -111,7 +138,7 @@ class Profile extends StatelessWidget {
                           onPressed: () {},
                           icon: Icon(Icons.arrow_forward_ios_outlined),
                           color: Colors.white,
-                          iconSize: 20,
+                          iconSize: 15,
                         )
                       ],
                     ),
@@ -121,7 +148,8 @@ class Profile extends StatelessWidget {
               SizedBox(height: 15),
               ListTile(
                 contentPadding: EdgeInsets.all(0),
-                leading: Icon(Icons.person_outline, color: Colors.white),
+                leading: Icon(Icons.account_balance_wallet_outlined,
+                    color: Colors.white),
                 title: Text(
                   'Add money to wallet',
                   style: TextStyle(color: Colors.white),
@@ -132,11 +160,12 @@ class Profile extends StatelessWidget {
                     Icons.arrow_forward_ios_rounded,
                     color: Colors.white,
                   ),
+                  iconSize: 15,
                 ),
               ),
               ListTile(
                 contentPadding: EdgeInsets.all(0),
-                leading: Icon(Icons.person_outline, color: Colors.white),
+                leading: Icon(Icons.location_on_outlined, color: Colors.white),
                 title: Text(
                   'Adress setting',
                   style: TextStyle(color: Colors.white),
@@ -147,11 +176,12 @@ class Profile extends StatelessWidget {
                     Icons.arrow_forward_ios_rounded,
                     color: Colors.white,
                   ),
+                  iconSize: 15,
                 ),
               ),
               ListTile(
                 contentPadding: EdgeInsets.all(0),
-                leading: Icon(Icons.person_outline, color: Colors.white),
+                leading: Icon(Icons.payment, color: Colors.white),
                 title: Text(
                   'Payment setting',
                   style: TextStyle(color: Colors.white),
@@ -162,11 +192,12 @@ class Profile extends StatelessWidget {
                     Icons.arrow_forward_ios_rounded,
                     color: Colors.white,
                   ),
+                  iconSize: 15,
                 ),
               ),
               ListTile(
                 contentPadding: EdgeInsets.all(0),
-                leading: Icon(Icons.person_outline, color: Colors.white),
+                leading: Icon(Icons.support_agent_rounded, color: Colors.white),
                 title: Text(
                   'Customer support',
                   style: TextStyle(color: Colors.white),
@@ -177,11 +208,12 @@ class Profile extends StatelessWidget {
                     Icons.arrow_forward_ios_rounded,
                     color: Colors.white,
                   ),
+                  iconSize: 15,
                 ),
               ),
               ListTile(
                 contentPadding: EdgeInsets.all(0),
-                leading: Icon(Icons.person_outline, color: Colors.white),
+                leading: Icon(Icons.security, color: Colors.white),
                 title: Text(
                   'Terms',
                   style: TextStyle(color: Colors.white),
@@ -192,16 +224,19 @@ class Profile extends StatelessWidget {
                     Icons.arrow_forward_ios_rounded,
                     color: Colors.white,
                   ),
+                  iconSize: 15,
                 ),
               ),
               Center(
                 child: SizedBox(
                   width: 100,
                   child: RawMaterialButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, 'login');
+                    },
                     padding: EdgeInsets.all(10),
                     child: Text('LOGOUT'),
-                    fillColor: Colors.blue,
+                    fillColor: Colors.indigoAccent[400],
                     textStyle: TextStyle(
                       color: Colors.white,
                     ),

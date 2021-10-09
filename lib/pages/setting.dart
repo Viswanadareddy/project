@@ -14,6 +14,7 @@ class _SettingState extends State<Setting> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: Text('Setting', style: TextStyle(fontSize: 22)),
         centerTitle: true,
@@ -21,7 +22,7 @@ class _SettingState extends State<Setting> {
         foregroundColor: Colors.white,
         leading: IconButton(
           onPressed: () {
-            Navigator.pushNamed(context, 'login');
+            Navigator.pushNamed(context, 'bottomNavigationBar');
           },
           icon: Icon(Icons.arrow_back_ios),
           color: Colors.white,
@@ -40,13 +41,16 @@ class _SettingState extends State<Setting> {
                 style: TextStyle(color: Colors.white),
               ),
               trailing: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, 'profile');
+                },
                 icon: Icon(
                   Icons.arrow_forward_ios_rounded,
                   color: Colors.white,
                 ),
               ),
             ),
+            Divider(),
             ListTile(
               contentPadding: EdgeInsets.all(0),
               leading: Icon(
@@ -58,13 +62,16 @@ class _SettingState extends State<Setting> {
                 style: TextStyle(color: Colors.white),
               ),
               trailing: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, 'notifications');
+                },
                 icon: Icon(
                   Icons.arrow_forward_ios_rounded,
                   color: Colors.white,
                 ),
               ),
             ),
+            Divider(),
             ListTile(
               contentPadding: EdgeInsets.all(0),
               leading: Icon(
@@ -83,6 +90,7 @@ class _SettingState extends State<Setting> {
                 ),
               ),
             ),
+            Divider(),
             ListTile(
               contentPadding: EdgeInsets.all(0),
               leading: Icon(
@@ -101,6 +109,7 @@ class _SettingState extends State<Setting> {
                 ),
               ),
             ),
+            Divider(),
             ListTile(
               contentPadding: EdgeInsets.all(0),
               leading: Icon(
@@ -119,6 +128,7 @@ class _SettingState extends State<Setting> {
                 ),
               ),
             ),
+            Divider(),
             ListTile(
               contentPadding: EdgeInsets.all(0),
               leading: Icon(

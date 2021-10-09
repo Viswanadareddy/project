@@ -86,14 +86,16 @@ class _MultiSwitchState extends State<MultiSwitch> {
         iconTheme: IconThemeData(color: Colors.white),
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios, color: Colors.white),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, 'bottomNavigationBar');
+          },
         ),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          customSwitch('Show Notifications', bool, val1, onChangeFunction1),
+          customSwitch('Show notifications', bool, val1, onChangeFunction1),
           customSwitch('Allow icon badge', bool, val2, onChangeFunction2),
           Divider(
             color: Colors.white30,
@@ -103,16 +105,16 @@ class _MultiSwitchState extends State<MultiSwitch> {
               child: Text('PUSH NOTIFICATION',
                   style: TextStyle(
                       color: Colors.white60,
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold))),
-          customSwitch('Show On Lock Screen', bool, val3, onChangeFunction3),
+                      fontSize: 13,
+                      fontWeight: FontWeight.normal))),
+          customSwitch('Show on Lock Screen', bool, val3, onChangeFunction3),
           Padding(
               padding: const EdgeInsets.only(left: 13.0),
               child: Text('Show notifications when mobile is locked',
                   style: TextStyle(
                       color: Colors.white60,
                       fontSize: 15,
-                      fontWeight: FontWeight.bold))),
+                      fontWeight: FontWeight.normal))),
           customSwitch('Reactions', bool, val4, onChangeFunction4),
           Padding(
               padding: const EdgeInsets.only(left: 13.0),
@@ -121,7 +123,7 @@ class _MultiSwitchState extends State<MultiSwitch> {
                   style: TextStyle(
                       color: Colors.white60,
                       fontSize: 15,
-                      fontWeight: FontWeight.bold))),
+                      fontWeight: FontWeight.normal))),
           customSwitch('Sounds', bool, val5, onChangeFunction5),
           Padding(
               padding: const EdgeInsets.only(left: 13.0),
@@ -129,15 +131,15 @@ class _MultiSwitchState extends State<MultiSwitch> {
                   style: TextStyle(
                       color: Colors.white60,
                       fontSize: 15,
-                      fontWeight: FontWeight.bold))),
+                      fontWeight: FontWeight.normal))),
           customSwitch('Tips & Tricks', bool, val6, onChangeFunction6),
           Padding(
               padding: const EdgeInsets.only(left: 13.0),
-              child: Text('Receive notification when new item features',
+              child: Text('Receive notification when new item feature',
                   style: TextStyle(
                       color: Colors.white60,
                       fontSize: 15,
-                      fontWeight: FontWeight.bold))),
+                      fontWeight: FontWeight.normal))),
           Divider(
             color: Colors.white30,
           ),
@@ -147,7 +149,7 @@ class _MultiSwitchState extends State<MultiSwitch> {
                   style: TextStyle(
                       color: Colors.white60,
                       fontSize: 15,
-                      fontWeight: FontWeight.bold))),
+                      fontWeight: FontWeight.normal))),
           customSwitch('In-app sounds', bool, val7, onChangeFunction7),
           Padding(
               padding: const EdgeInsets.only(left: 13.0),
@@ -155,7 +157,7 @@ class _MultiSwitchState extends State<MultiSwitch> {
                   style: TextStyle(
                       color: Colors.white60,
                       fontSize: 15,
-                      fontWeight: FontWeight.bold))),
+                      fontWeight: FontWeight.normal))),
           customSwitch(
               'Chat Banner Notifications', bool, val8, onChangeFunction8),
           Padding(
@@ -164,7 +166,7 @@ class _MultiSwitchState extends State<MultiSwitch> {
                   style: TextStyle(
                       color: Colors.white60,
                       fontSize: 15,
-                      fontWeight: FontWeight.bold))),
+                      fontWeight: FontWeight.normal))),
           customSwitch('Tips & Tricks', bool, val9, onChangeFunction9),
           Padding(
               padding: const EdgeInsets.only(left: 13.0),
@@ -187,9 +189,9 @@ Widget customSwitch(String text, bool, val, Function onChangeMethod) {
       children: [
         Text(text,
             style: TextStyle(
-              fontSize: 18.0,
-              color: Colors.white,
-            )),
+                fontSize: 15.0,
+                fontWeight: FontWeight.w600,
+                color: Colors.white)),
         Spacer(),
         CupertinoSwitch(
             trackColor: Colors.grey,

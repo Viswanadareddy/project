@@ -12,6 +12,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
@@ -111,7 +112,9 @@ class _LoginPageState extends State<LoginPage> {
             child: SizedBox(
               width: 350,
               child: RawMaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, 'bottomNavigationBar');
+                },
                 padding: EdgeInsets.all(10),
                 child: Text('LOGIN'),
                 fillColor: Colors.blue,

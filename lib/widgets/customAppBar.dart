@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:project/values/values.dart';
 
@@ -55,4 +55,4 @@ class CustomAppBarWidget extends StatelessWidget {
               Icon(FontAwesomeIcons.shoppingBag, color: AppColorsConst.black))
     ];
   }
-}
+}*/
