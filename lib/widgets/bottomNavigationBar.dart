@@ -7,6 +7,7 @@ import 'package:project/values/values.dart';
 import 'package:project/pages/favourite.dart';
 import 'package:project/pages/profile.dart';
 import 'package:project/pages/menu.dart';
+import 'package:project/pages/customisation.dart';
 
 class BottomBarNavigation extends StatefulWidget {
   const BottomBarNavigation({Key? key}) : super(key: key);
@@ -41,19 +42,16 @@ class _BottomBarNavigationState extends State<BottomBarNavigation> {
               icon: Icon(Icons.food_bank_sharp, color: Colors.white70),
               title: Text(
                 '',
-                style: TextStyle(color: Color(0xFF2c2b2b)),
               )),
           BottomNavigationBarItem(
               icon: Icon(Icons.category_outlined, color: Colors.white70),
               title: Text(
                 '',
-                style: TextStyle(color: Color(0xFF2c2b2b)),
               )),
           BottomNavigationBarItem(
               icon: Icon(Icons.favorite_border, color: Colors.white),
               title: Text(
                 '',
-                style: TextStyle(color: Color(0xFF2c2b2b)),
               )),
           BottomNavigationBarItem(
               icon: Icon(
@@ -62,17 +60,15 @@ class _BottomBarNavigationState extends State<BottomBarNavigation> {
               ),
               title: Text(
                 '',
-                style: TextStyle(color: Color(0xFF2c2b2b)),
               )),
           BottomNavigationBarItem(
               icon: Icon(Icons.person_outline_outlined, color: Colors.white70),
               title: Text(
                 '',
-                style: TextStyle(color: Color(0xFF2c2b2b)),
               ))
         ],
         currentIndex: _currentIndex,
-        selectedItemColor: Colors.blueAccent,
+        selectedItemColor: Color(0xFF197602),
         backgroundColor: Colors.grey,
         onTap: _onItemTap,
       ),

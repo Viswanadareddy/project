@@ -13,6 +13,7 @@ import 'package:project/pages/profile.dart';
 import 'package:project/unbording/MyHomePage.dart';
 import 'package:project/widgets/bottomNavigationBar.dart';
 import 'package:project/pages/customisation.dart';
+import 'package:project/pages/cart.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => MaterialApp(
-        home: MyHomePage(),
+        home: Customisation(),
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
         //themeMode: ThemeMode.dark,
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
           'profile': (context) => Profile(),
           'menu': (context) => MenuPage(),
           'customisation': (context) => Customisation(),
+          'cartpage': (context) => CartPage(),
           //'products': (context) => ProductListPage(),
           //'products_detail': (context) => ProductDetailsPage(),
         },

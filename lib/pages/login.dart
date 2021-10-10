@@ -18,8 +18,7 @@ class _LoginPageState extends State<LoginPage> {
         children: [
           SizedBox(height: 250),
           Center(
-            child: Image.asset('assets/knife_logo_purple.jpg',
-                height: 60, width: 60),
+            child: Image.asset('assets/knife_spoon.png', height: 60, width: 60),
           ),
           SizedBox(height: 5),
           Center(
@@ -39,18 +38,18 @@ class _LoginPageState extends State<LoginPage> {
                 style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
                   prefixIcon: Container(
-                      //padding: EdgeInsets.fromLTRB(30, 10, 0, 10),
-                      //color: Colors.blueAccent,
-                      child: Icon(
-                        Icons.email_outlined,
-                        color: Colors.white,
-                      ),
-                      decoration: BoxDecoration(
-                        color: Colors.lightBlueAccent,
-                        border: Border.all(color: Colors.black38, width: 10),
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      padding: EdgeInsets.fromLTRB(5, 0, 0, 0)),
+                    //padding: EdgeInsets.fromLTRB(30, 10, 0, 10),
+                    //color: Colors.blueAccent,
+                    child: Icon(
+                      Icons.email_outlined,
+                      color: Colors.white,
+                    ),
+                    decoration: BoxDecoration(
+                      //color: Colors.lightBlueAccent,
+                      border: Border.all(width: 0.1),
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                  ),
                   //color: Colors.blue,
                   /* decoration: BoxDecoration(
                     color: Colors.lightBlueAccent,
@@ -87,7 +86,7 @@ class _LoginPageState extends State<LoginPage> {
                     //color: Colors.blue,
                     //padding: EdgeInsets.symmetric(horizontal: 2),
                     decoration: BoxDecoration(
-                      color: Colors.lightBlueAccent,
+                      //color: Colors.lightBlueAccent,
                       // border: Border.all(width: 5),
                       borderRadius: BorderRadius.circular(15),
                     ),

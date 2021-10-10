@@ -9,6 +9,7 @@ class FavouritePage extends StatelessWidget {
       backgroundColor: Colors.grey[900],
       appBar: AppBar(
         backgroundColor: Colors.transparent,
+        automaticallyImplyLeading: false,
         elevation: 0,
         title: Center(
           child: Text(
