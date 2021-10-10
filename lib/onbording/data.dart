@@ -18,17 +18,17 @@ class OnboardingItems {
       OnboardingItem(
           title: 'ASAP Delivery',
           subtitles: 'Cant hold shit then order in!!!',
-          image: 'assets/knife_logo.jpg',
+          image: 'assets/1.jpg',
           color: Colors.black87),
       OnboardingItem(
           title: 'ASAP Delivery',
           subtitles: 'Cant hold shit them order in!!!',
-          image: 'images/Noodle.png',
+          image: 'assets/2.jpg',
           color: Colors.black87),
       OnboardingItem(
           title: 'ASAP Delivery',
           subtitles: 'Cant hold shit them order in!!!',
-          image: 'images/Pizza.png',
+          image: 'assets/3.jpg',
           color: Colors.black87),
       /*OnboardingItem(
           title: 'ASAP Delivery',

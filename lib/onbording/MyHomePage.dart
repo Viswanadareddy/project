@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project/unbording/data.dart';
+import 'package:project/onbording/data.dart';
 
 class MyHomePage extends StatelessWidget {
   @override
