@@ -43,9 +43,6 @@ class _RegisterPageState extends State<RegisterPage> {
                   prefixIcon: Container(
                     child: Icon(
                       Icons.person_outline_outlined,
-=======
-                      Icons.lock_outline_rounded,
->>>>>>> b8a40365cd16e13e973d28b4e092dad54fe0cf39
                       color: Colors.white,
                     ),
                     //color: Colors.blue,
