@@ -34,11 +34,7 @@ class _RegisterPageState extends State<RegisterPage> {
           Center(
             child: Container(
               width: 340,
-<<<<<<< HEAD
               height: 80,
-=======
-              height:80,
->>>>>>> b8a40365cd16e13e973d28b4e092dad54fe0cf39
               child: TextField(
                 style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
@@ -46,7 +42,6 @@ class _RegisterPageState extends State<RegisterPage> {
                   //filled:true,
                   prefixIcon: Container(
                     child: Icon(
-<<<<<<< HEAD
                       Icons.person_outline_outlined,
 =======
                       Icons.lock_outline_rounded,
@@ -109,18 +104,10 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
             ),
           ),
-<<<<<<< HEAD
           Center(
             child: Container(
               width: 340,
               height: 80,
-=======
-
-          Center(
-            child: Container(
-              width: 340,
-              height:80,
->>>>>>> b8a40365cd16e13e973d28b4e092dad54fe0cf39
               child: TextField(
                 style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
@@ -158,11 +145,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   Navigator.pushNamed(context, 'bottomNavigationBar');
                 },
                 padding: EdgeInsets.all(10),
-<<<<<<< HEAD
                 child: Text('REGISTER'),
-=======
-                child: Text('Sign Up'),
->>>>>>> b8a40365cd16e13e973d28b4e092dad54fe0cf39
                 fillColor: Colors.blue,
                 textStyle: TextStyle(
                   color: Colors.white,
@@ -170,7 +153,6 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
             ),
           ),
-<<<<<<< HEAD
           Center(
             child: TextButton(
                 onPressed: () {
@@ -183,9 +165,6 @@ class _RegisterPageState extends State<RegisterPage> {
                   textAlign: TextAlign.center,
                 )),
           ),
-=======
-
->>>>>>> b8a40365cd16e13e973d28b4e092dad54fe0cf39
         ],
       ),
       backgroundColor: Colors.grey[900],
