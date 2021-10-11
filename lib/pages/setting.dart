@@ -28,126 +28,128 @@ class _SettingState extends State<Setting> {
           color: Colors.white,
         ),
       ),
-      body: Container(
-        padding: const EdgeInsets.all(10),
-        child: Column(
-          children: [
-            SearchWidget(),
-            ListTile(
-              contentPadding: EdgeInsets.all(0),
-              leading: Icon(Icons.person_outline, color: Colors.white),
-              title: Text(
-                'Account',
-                style: TextStyle(color: Colors.white),
-              ),
-              trailing: IconButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, 'profile');
-                },
-                icon: Icon(
-                  Icons.arrow_forward_ios_rounded,
-                  color: Colors.white,
+      body: SingleChildScrollView(
+        child: Container(
+          padding: const EdgeInsets.all(10),
+          child: Column(
+            children: [
+              SearchWidget(),
+              ListTile(
+                contentPadding: EdgeInsets.all(0),
+                leading: Icon(Icons.person_outline, color: Colors.white),
+                title: Text(
+                  'Account',
+                  style: TextStyle(color: Colors.white),
+                ),
+                trailing: IconButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, 'profile');
+                  },
+                  icon: Icon(
+                    Icons.arrow_forward_ios_rounded,
+                    color: Colors.white,
+                  ),
                 ),
               ),
-            ),
-            Divider(),
-            ListTile(
-              contentPadding: EdgeInsets.all(0),
-              leading: Icon(
-                Icons.notifications_active_outlined,
-                color: Colors.white,
-              ),
-              title: Text(
-                'Notifications',
-                style: TextStyle(color: Colors.white),
-              ),
-              trailing: IconButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, 'notifications');
-                },
-                icon: Icon(
-                  Icons.arrow_forward_ios_rounded,
+              Divider(),
+              ListTile(
+                contentPadding: EdgeInsets.all(0),
+                leading: Icon(
+                  Icons.notifications_active_outlined,
                   color: Colors.white,
                 ),
-              ),
-            ),
-            Divider(),
-            ListTile(
-              contentPadding: EdgeInsets.all(0),
-              leading: Icon(
-                Icons.remove_red_eye_outlined,
-                color: Colors.white,
-              ),
-              title: Text(
-                'Apperance',
-                style: TextStyle(color: Colors.white),
-              ),
-              trailing: IconButton(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.arrow_forward_ios_rounded,
-                  color: Colors.white,
+                title: Text(
+                  'Notifications',
+                  style: TextStyle(color: Colors.white),
+                ),
+                trailing: IconButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, 'notifications');
+                  },
+                  icon: Icon(
+                    Icons.arrow_forward_ios_rounded,
+                    color: Colors.white,
+                  ),
                 ),
               ),
-            ),
-            Divider(),
-            ListTile(
-              contentPadding: EdgeInsets.all(0),
-              leading: Icon(
-                Icons.lock_open,
-                color: Colors.white,
-              ),
-              title: Text(
-                'Privacy & Security',
-                style: TextStyle(color: Colors.white),
-              ),
-              trailing: IconButton(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.arrow_forward_ios_rounded,
+              Divider(),
+              ListTile(
+                contentPadding: EdgeInsets.all(0),
+                leading: Icon(
+                  Icons.remove_red_eye_outlined,
                   color: Colors.white,
                 ),
-              ),
-            ),
-            Divider(),
-            ListTile(
-              contentPadding: EdgeInsets.all(0),
-              leading: Icon(
-                Icons.support_agent_rounded,
-                color: Colors.white,
-              ),
-              title: Text(
-                'Help & Support',
-                style: TextStyle(color: Colors.white),
-              ),
-              trailing: IconButton(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.arrow_forward_ios_rounded,
-                  color: Colors.white,
+                title: Text(
+                  'Apperance',
+                  style: TextStyle(color: Colors.white),
+                ),
+                trailing: IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.arrow_forward_ios_rounded,
+                    color: Colors.white,
+                  ),
                 ),
               ),
-            ),
-            Divider(),
-            ListTile(
-              contentPadding: EdgeInsets.all(0),
-              leading: Icon(
-                Icons.help_outline_outlined,
-                color: Colors.white,
-              ),
-              title: Text(
-                'About',
-                style: TextStyle(color: Colors.white),
-              ),
-              trailing: IconButton(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.arrow_forward_ios_rounded,
+              Divider(),
+              ListTile(
+                contentPadding: EdgeInsets.all(0),
+                leading: Icon(
+                  Icons.lock_open,
                   color: Colors.white,
                 ),
+                title: Text(
+                  'Privacy & Security',
+                  style: TextStyle(color: Colors.white),
+                ),
+                trailing: IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.arrow_forward_ios_rounded,
+                    color: Colors.white,
+                  ),
+                ),
               ),
-            ),
-          ],
+              Divider(),
+              ListTile(
+                contentPadding: EdgeInsets.all(0),
+                leading: Icon(
+                  Icons.support_agent_rounded,
+                  color: Colors.white,
+                ),
+                title: Text(
+                  'Help & Support',
+                  style: TextStyle(color: Colors.white),
+                ),
+                trailing: IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.arrow_forward_ios_rounded,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              Divider(),
+              ListTile(
+                contentPadding: EdgeInsets.all(0),
+                leading: Icon(
+                  Icons.help_outline_outlined,
+                  color: Colors.white,
+                ),
+                title: Text(
+                  'About',
+                  style: TextStyle(color: Colors.white),
+                ),
+                trailing: IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.arrow_forward_ios_rounded,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
       backgroundColor: Colors.grey[900],

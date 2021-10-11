@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
         home: MyHomePage(),
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
+        scrollBehavior: Mycustomscroll(),
         //themeMode: ThemeMode.dark,
         routes: {
           'setting': (context) => Setting(),
@@ -61,4 +62,12 @@ class MyApp extends StatelessWidget {
                     color: Colors.white70),
                 bodyText2: TextStyle(fontSize: 20.0, color: Colors.white))),
       );
+}
+
+class Mycustomscroll extends MaterialScrollBehavior {
+  @override
+  Widget buildOverscrollIndicator(
+      BuildContext context, Widget child, ScrollableDetails details) {
+    return child;
+  }
 }

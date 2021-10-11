@@ -1,30 +1,5 @@
 import 'package:flutter/material.dart';
 
-/*class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      color: Colors.black,
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-        leading:
-            IconButton(
-              icon:Icon(
-                Icons.arrow_back_ios_outlined,
-                color:Colors.white,
-              ), onPressed: () {
-              print("Its clicked");
-            },
-            ),
-
-          title: const Text('Cart'),
-        ),
-        body: CartPage(),
-      ),
-    );
-  }
-}*/
 class CartPage extends StatefulWidget {
   const CartPage({Key? key}) : super(key: key);
 
@@ -35,6 +10,8 @@ class CartPage extends StatefulWidget {
 class _CartPageState extends State<CartPage> {
   @override
   Widget build(BuildContext context) {
+    double h = MediaQueryData().size.height;
+    double w = MediaQueryData().size.width;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,

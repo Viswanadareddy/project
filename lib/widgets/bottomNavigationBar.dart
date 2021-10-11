@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:carousel_pro/carousel_pro.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:project/pages/customisation.dart';
 import 'package:project/pages/payment.dart';
-import 'package:project/values/values.dart';
 import 'package:project/pages/favourite.dart';
 import 'package:project/pages/profile.dart';
 import 'package:project/pages/menu.dart';
-import 'package:project/pages/customisation.dart';
 
 class BottomBarNavigation extends StatefulWidget {
   const BottomBarNavigation({Key? key}) : super(key: key);
@@ -25,18 +21,77 @@ class _BottomBarNavigationState extends State<BottomBarNavigation> {
     Payment(),
     Profile(),
   ];
+
   @override
   Widget build(BuildContext context) {
-    int _selectedindex = 0;
-    void _onItemTap(int index) {
+    /*void _onItemTap(int index) {
       setState(() {
         _currentIndex = index;
       });
-    }
+    }*/
 
-    return new Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
+    return Scaffold(
+      bottomNavigationBar: BottomAppBar(
+        child: SizedBox(
+          height: 60,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: List.generate(
+              5,
+              (index) => IconButton(
+                icon: Opacity(
+                  opacity: 1.0,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        _bottomappbaritems[index],
+                        color: index == _currentIndex
+                            ? Colors.blueAccent[700]
+                            : null,
+                      ),
+                      index == _currentIndex ? Spacer() : SizedBox(),
+                      index == _currentIndex ? _builddot() : SizedBox.shrink(),
+                    ],
+                  ),
+                ),
+                onPressed: () {
+                  setState(() {
+                    _currentIndex = index;
+                  });
+                },
+              ),
+            ),
+          ),
+        ),
+      ),
+      body: _children[_currentIndex],
+    );
+  }
+}
+
+Widget _builddot() {
+  return Container(
+    width: 6,
+    height: 6,
+    decoration: BoxDecoration(
+      shape: BoxShape.circle,
+      color: Colors.blueAccent[700],
+    ),
+  );
+}
+
+final List<IconData> _bottomappbaritems = const <IconData>[
+  Icons.food_bank_sharp,
+  Icons.category_outlined,
+  Icons.favorite_border,
+  Icons.request_page_outlined,
+  Icons.person_outline_rounded,
+];
+
+
+
+/*type: BottomNavigationBarType.fixed,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
               icon: Icon(Icons.food_bank_sharp, color: Colors.white70),
@@ -71,8 +126,15 @@ class _BottomBarNavigationState extends State<BottomBarNavigation> {
         selectedItemColor: Color(0xFF197602),
         backgroundColor: Colors.grey,
         onTap: _onItemTap,
-      ),
-      body: _children[_currentIndex],
-    );
-  }
-}
+      ),*/
+
+
+
+      //For Floating Button
+      /*onPressed: () {
+                  setState(() {
+                    if (index != 2) {
+                      _currentindex = index;
+                    } else {}
+                  });
+                },*/

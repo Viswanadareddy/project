@@ -159,7 +159,9 @@ class _RegisterPageState extends State<RegisterPage> {
                 child: Text(
                   'I already have an account',
                   style: TextStyle(
-                      fontSize: 18, decoration: TextDecoration.underline),
+                      fontSize: 18,
+                      decoration: TextDecoration.underline,
+                      color: Colors.white70),
                   textAlign: TextAlign.center,
                 )),
           ),
