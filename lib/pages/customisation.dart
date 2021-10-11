@@ -10,6 +10,14 @@ class Customisation extends StatefulWidget {
 }
 
 class _CustomisationState extends State<Customisation> {
+  bool _hasBeenPressed1 = false;
+  bool _hasBeenPressed2 = false;
+  bool _hasBeenPressed3 = false;
+  bool _hasBeenPressed4 = false;
+  bool _hasBeenPressed5 = false;
+  bool _hasBeenPressed6 = false;
+  bool _hasBeenPressed7 = false;
+  bool _hasBeenPressed8 = false;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -36,7 +44,7 @@ class _CustomisationState extends State<Customisation> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(right: 270, top: 20),
+            padding: const EdgeInsets.only(left: 20, top: 20),
             child: Directionality(
               textDirection: TextDirection.ltr,
               child: Text(
@@ -57,8 +65,10 @@ class _CustomisationState extends State<Customisation> {
                   Padding(
                     padding: EdgeInsets.only(top: 15, left: 20),
                     child: RawMaterialButton(
-                      onPressed: () {
-                        print('pressed');
+                      onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed1 = !_hasBeenPressed1;
+                        })
                       },
                       child: Text(
                         'Small',
@@ -67,14 +77,20 @@ class _CustomisationState extends State<Customisation> {
                             fontWeight: FontWeight.w600,
                             color: Colors.white),
                       ),
-                      fillColor: Colors.lightBlueAccent,
+                      shape: RoundedRectangleBorder(
+                          side: BorderSide(color: Colors.blueAccent, width: 1),
+                          borderRadius: BorderRadius.circular(5)),
+                      fillColor:
+                          _hasBeenPressed1 ? Colors.blueAccent : Colors.black,
                     ),
                   ),
                   Padding(
                     padding: EdgeInsets.only(right: 30, left: 30, top: 15),
                     child: RawMaterialButton(
-                      onPressed: () {
-                        print('pressed');
+                      onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed2 = !_hasBeenPressed2;
+                        })
                       },
                       child: Text(
                         'Medium',
@@ -83,15 +99,22 @@ class _CustomisationState extends State<Customisation> {
                             fontWeight: FontWeight.w600,
                             color: Colors.white),
                       ),
-                      fillColor: Colors.blueAccent,
+                      shape: RoundedRectangleBorder(
+                        side: BorderSide(color: Colors.blueAccent, width: 1),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      fillColor:
+                          _hasBeenPressed2 ? Colors.blueAccent : Colors.black,
                     ),
                   ),
                   Container(
                     child: Padding(
                       padding: EdgeInsets.only(top: 15),
                       child: RawMaterialButton(
-                        onPressed: () {
-                          print('pressed');
+                        onPressed: () => {
+                          setState(() {
+                            _hasBeenPressed3 = !_hasBeenPressed3;
+                          })
                         },
                         child: Text(
                           'Large',
@@ -100,7 +123,12 @@ class _CustomisationState extends State<Customisation> {
                               fontWeight: FontWeight.w600,
                               color: Colors.white),
                         ),
-                        fillColor: Colors.blueAccent,
+                        shape: RoundedRectangleBorder(
+                            side:
+                                BorderSide(color: Colors.blueAccent, width: 1),
+                            borderRadius: BorderRadius.circular(5)),
+                        fillColor:
+                            _hasBeenPressed3 ? Colors.blueAccent : Colors.black,
                       ),
                     ),
                   ),
@@ -116,13 +144,13 @@ class _CustomisationState extends State<Customisation> {
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(right: 270, top: 20),
+                    padding: const EdgeInsets.only(left: 20, top: 20),
                     child: Directionality(
                       textDirection: TextDirection.ltr,
                       child: Text(
                         'Topping',
                         style: TextStyle(
-                          fontSize: 20.0,
+                          fontSize: 18.0,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -147,13 +175,29 @@ class _CustomisationState extends State<Customisation> {
                             width: 150,
                           ),
                           RawMaterialButton(
-                            onPressed: () {},
-                            fillColor: Colors.blueAccent,
-                            child: Text(
-                              'Add +5',
-                              style:
-                                  TextStyle(fontSize: 15, color: Colors.white),
-                            ),
+                            onPressed: () => {
+                              setState(() {
+                                _hasBeenPressed4 = !_hasBeenPressed4;
+                              })
+                            },
+                            child: _hasBeenPressed4
+                                ? Text(
+                                    'Added',
+                                    style: TextStyle(
+                                        fontSize: 15, color: Colors.white),
+                                  )
+                                : Text(
+                                    'Add +5',
+                                    style: TextStyle(
+                                        fontSize: 15, color: Colors.white),
+                                  ),
+                            shape: RoundedRectangleBorder(
+                                side: BorderSide(
+                                    color: Colors.blueAccent, width: 1),
+                                borderRadius: BorderRadius.circular(5)),
+                            fillColor: _hasBeenPressed4
+                                ? Colors.blueAccent
+                                : Colors.black,
                           ),
                         ],
                       )),
@@ -173,13 +217,29 @@ class _CustomisationState extends State<Customisation> {
                             width: 150,
                           ),
                           RawMaterialButton(
-                            onPressed: () {},
-                            fillColor: Colors.lightBlueAccent,
-                            child: Text(
-                              'Added',
-                              style:
-                                  TextStyle(fontSize: 15, color: Colors.white),
-                            ),
+                            onPressed: () => {
+                              setState(() {
+                                _hasBeenPressed5 = !_hasBeenPressed5;
+                              })
+                            },
+                            child: _hasBeenPressed5
+                                ? Text(
+                                    'Added',
+                                    style: TextStyle(
+                                        fontSize: 15, color: Colors.white),
+                                  )
+                                : Text(
+                                    'Add +5',
+                                    style: TextStyle(
+                                        fontSize: 15, color: Colors.white),
+                                  ),
+                            shape: RoundedRectangleBorder(
+                                side: BorderSide(
+                                    color: Colors.blueAccent, width: 1),
+                                borderRadius: BorderRadius.circular(5)),
+                            fillColor: _hasBeenPressed5
+                                ? Colors.blueAccent
+                                : Colors.black,
                           ),
                         ],
                       )),
@@ -199,13 +259,29 @@ class _CustomisationState extends State<Customisation> {
                             width: 175,
                           ),
                           RawMaterialButton(
-                            onPressed: () {},
-                            fillColor: Colors.blueAccent,
-                            child: Text(
-                              'Add +10',
-                              style:
-                                  TextStyle(fontSize: 15, color: Colors.white),
-                            ),
+                            onPressed: () => {
+                              setState(() {
+                                _hasBeenPressed6 = !_hasBeenPressed6;
+                              })
+                            },
+                            child: _hasBeenPressed6
+                                ? Text(
+                                    'Added',
+                                    style: TextStyle(
+                                        fontSize: 15, color: Colors.white),
+                                  )
+                                : Text(
+                                    'Add +10',
+                                    style: TextStyle(
+                                        fontSize: 15, color: Colors.white),
+                                  ),
+                            shape: RoundedRectangleBorder(
+                                side: BorderSide(
+                                    color: Colors.blueAccent, width: 1),
+                                borderRadius: BorderRadius.circular(5)),
+                            fillColor: _hasBeenPressed6
+                                ? Colors.blueAccent
+                                : Colors.black,
                           ),
                         ],
                       )),
@@ -225,13 +301,29 @@ class _CustomisationState extends State<Customisation> {
                             width: 175,
                           ),
                           RawMaterialButton(
-                            onPressed: () {},
-                            fillColor: Colors.blueAccent,
-                            child: Text(
-                              'Add +5',
-                              style:
-                                  TextStyle(fontSize: 15, color: Colors.white),
-                            ),
+                            onPressed: () => {
+                              setState(() {
+                                _hasBeenPressed7 = !_hasBeenPressed7;
+                              })
+                            },
+                            child: _hasBeenPressed7
+                                ? Text(
+                                    'Added',
+                                    style: TextStyle(
+                                        fontSize: 15, color: Colors.white),
+                                  )
+                                : Text(
+                                    'Add +5',
+                                    style: TextStyle(
+                                        fontSize: 15, color: Colors.white),
+                                  ),
+                            shape: RoundedRectangleBorder(
+                                side: BorderSide(
+                                    color: Colors.blueAccent, width: 1),
+                                borderRadius: BorderRadius.circular(5)),
+                            fillColor: _hasBeenPressed7
+                                ? Colors.blueAccent
+                                : Colors.black,
                           ),
                         ],
                       )),
@@ -267,12 +359,17 @@ class _CustomisationState extends State<Customisation> {
                     width: 170,
                   ),
                   RawMaterialButton(
-                    onPressed: () {},
-                    fillColor: Colors.blueAccent,
+                    onPressed: () {
+                      Navigator.pushNamed(context, 'cartpage');
+                    },
                     child: Text(
-                      'Pay 45',
+                      ' ADD TO CART ',
                       style: TextStyle(fontSize: 15, color: Colors.white),
                     ),
+                    shape: RoundedRectangleBorder(
+                        side: BorderSide(color: Colors.blueAccent, width: 1),
+                        borderRadius: BorderRadius.circular(5)),
+                    fillColor: Colors.blueAccent,
                   ),
                 ],
               )),

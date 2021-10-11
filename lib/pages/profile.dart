@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class Profile extends StatelessWidget {
   const Profile({Key? key}) : super(key: key);
@@ -231,7 +232,7 @@ class Profile extends StatelessWidget {
                   width: 100,
                   child: RawMaterialButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, 'login');
+                      SystemNavigator.pop();
                     },
                     padding: EdgeInsets.all(10),
                     child: Text('LOGOUT'),
