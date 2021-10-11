@@ -20,7 +20,7 @@ class _LoginPageState extends State<LoginPage> {
           Center(
             child: Image.asset('assets/knife_spoon.png', height: 60, width: 60),
           ),
-          SizedBox(height: 5),
+          SizedBox(height: 15),
           Center(
             child: Text(
               'WELCOME BACK!',
@@ -30,6 +30,7 @@ class _LoginPageState extends State<LoginPage> {
                   color: Colors.white),
             ),
           ),
+          SizedBox(height: 10),
           Center(
             child: Container(
               width: 340,

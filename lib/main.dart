@@ -47,8 +47,8 @@ class MyApp extends StatelessWidget {
             visualDensity: VisualDensity.adaptivePlatformDensity,
             textTheme: TextTheme(
                 headline1: TextStyle(
-                  fontSize: 40.0,
-                  fontWeight: FontWeight.bold,
+                  fontSize: 15.0,
+                  fontWeight: FontWeight.w500,
                   color: Colors.white,
                 ),
                 headline5: TextStyle(
@@ -57,8 +57,8 @@ class MyApp extends StatelessWidget {
                     color: Colors.blue[700]),
                 bodyText1: TextStyle(
                     fontSize: 14.0,
-                    fontWeight: FontWeight.normal,
-                    color: Colors.white),
+                    fontWeight: FontWeight.w500,
+                    color: Colors.white70),
                 bodyText2: TextStyle(fontSize: 20.0, color: Colors.white))),
       );
 }

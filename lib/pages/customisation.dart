@@ -18,14 +18,19 @@ class _CustomisationState extends State<Customisation> {
         children: [
           Image.asset('assets/food.jpg'),
           Padding(
-            padding: const EdgeInsets.only(right: 180, top: 15),
+            padding: const EdgeInsets.only(
+              right: 180,
+              left: 8,
+              top: 15,
+            ),
             child: Directionality(
               textDirection: TextDirection.rtl,
               child: Text(
                 'Customisation',
                 style: TextStyle(
-                  fontSize: 25.0,
-                  fontWeight: FontWeight.bold,
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.white70,
                 ),
               ),
             ),
@@ -37,8 +42,9 @@ class _CustomisationState extends State<Customisation> {
               child: Text(
                 'Select Size',
                 style: TextStyle(
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.white,
                 ),
               ),
             ),
@@ -65,7 +71,7 @@ class _CustomisationState extends State<Customisation> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(right: 40, left: 40, top: 15),
+                    padding: EdgeInsets.only(right: 30, left: 30, top: 15),
                     child: RawMaterialButton(
                       onPressed: () {
                         print('pressed');
@@ -114,7 +120,7 @@ class _CustomisationState extends State<Customisation> {
                     child: Directionality(
                       textDirection: TextDirection.ltr,
                       child: Text(
-                        'Toppings',
+                        'Topping',
                         style: TextStyle(
                           fontSize: 20.0,
                           fontWeight: FontWeight.bold,
@@ -164,7 +170,7 @@ class _CustomisationState extends State<Customisation> {
                             ),
                           ),
                           SizedBox(
-                            width: 202,
+                            width: 150,
                           ),
                           RawMaterialButton(
                             onPressed: () {},
@@ -190,7 +196,7 @@ class _CustomisationState extends State<Customisation> {
                             ),
                           ),
                           SizedBox(
-                            width: 228,
+                            width: 175,
                           ),
                           RawMaterialButton(
                             onPressed: () {},
@@ -216,7 +222,7 @@ class _CustomisationState extends State<Customisation> {
                             ),
                           ),
                           SizedBox(
-                            width: 225,
+                            width: 175,
                           ),
                           RawMaterialButton(
                             onPressed: () {},
@@ -258,7 +264,7 @@ class _CustomisationState extends State<Customisation> {
                     ),
                   ),
                   SizedBox(
-                    width: 225,
+                    width: 170,
                   ),
                   RawMaterialButton(
                     onPressed: () {},

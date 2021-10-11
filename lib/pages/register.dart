@@ -16,10 +16,11 @@ class _RegisterPageState extends State<RegisterPage> {
         children: [
           SizedBox(height: 150),
           Center(
-            child: Image.asset('assets/knife_logo_purple.jpg'),
+            child: Image.asset('assets/knife_logo_purple.jpg',
+                height: 60, width: 60),
           ),
           SizedBox(
-            height: 20,
+            height: 15,
             width: double.infinity,
           ),
           Text(
@@ -28,7 +29,7 @@ class _RegisterPageState extends State<RegisterPage> {
             textAlign: TextAlign.center,
           ),
           SizedBox(
-            height: 20,
+            height: 15,
             width: double.infinity,
           ),
           Center(
@@ -139,7 +140,7 @@ class _RegisterPageState extends State<RegisterPage> {
               width: 250,
               child: RawMaterialButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, 'bottomNavigationBar');
+                  Navigator.pushNamed(context, 'login');
                 },
                 padding: EdgeInsets.all(10),
                 child: Text('REGISTER'),
