@@ -21,12 +21,12 @@ class _CustomisationState extends State<Customisation> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height,
       color: Colors.grey[900],
       child: Column(
         children: [
-          Image.asset(
-            'assets/food.jpg',
-          ),
+          Image.asset('assets/food.jpg'),
           Padding(
             padding: const EdgeInsets.only(
               right: 180,
@@ -63,76 +63,65 @@ class _CustomisationState extends State<Customisation> {
             textDirection: TextDirection.ltr,
             child: Expanded(
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Padding(
-                    padding: EdgeInsets.only(top: 15, left: 20),
-                    child: RawMaterialButton(
-                      onPressed: () => {
-                        setState(() {
-                          _hasBeenPressed1 = !_hasBeenPressed1;
-                        })
-                      },
-                      child: Text(
-                        'Small',
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.white70),
-                      ),
-                      shape: RoundedRectangleBorder(
-                          side: BorderSide(color: Colors.blueAccent, width: 1),
-                          borderRadius: BorderRadius.circular(5)),
-                      fillColor:
-                          _hasBeenPressed1 ? Colors.blueAccent : Colors.black,
+                  RawMaterialButton(
+                    onPressed: () => {
+                      setState(() {
+                        _hasBeenPressed1 = !_hasBeenPressed1;
+                      })
+                    },
+                    child: Text(
+                      'Small',
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white70),
                     ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(right: 30, left: 30, top: 15),
-                    child: RawMaterialButton(
-                      onPressed: () => {
-                        setState(() {
-                          _hasBeenPressed2 = !_hasBeenPressed2;
-                        })
-                      },
-                      child: Text(
-                        'Medium',
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.white70),
-                      ),
-                      shape: RoundedRectangleBorder(
+                    shape: RoundedRectangleBorder(
                         side: BorderSide(color: Colors.blueAccent, width: 1),
-                        borderRadius: BorderRadius.circular(5),
-                      ),
-                      fillColor:
-                          _hasBeenPressed2 ? Colors.blueAccent : Colors.black,
-                    ),
+                        borderRadius: BorderRadius.circular(5)),
+                    fillColor:
+                        _hasBeenPressed1 ? Colors.blueAccent : Colors.black,
                   ),
-                  Container(
-                    child: Padding(
-                      padding: EdgeInsets.only(top: 15),
-                      child: RawMaterialButton(
-                        onPressed: () => {
-                          setState(() {
-                            _hasBeenPressed3 = !_hasBeenPressed3;
-                          })
-                        },
-                        child: Text(
-                          'Large',
-                          style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.white70),
-                        ),
-                        shape: RoundedRectangleBorder(
-                            side:
-                                BorderSide(color: Colors.blueAccent, width: 1),
-                            borderRadius: BorderRadius.circular(5)),
-                        fillColor:
-                            _hasBeenPressed3 ? Colors.blueAccent : Colors.black,
-                      ),
+                  RawMaterialButton(
+                    onPressed: () => {
+                      setState(() {
+                        _hasBeenPressed2 = !_hasBeenPressed2;
+                      })
+                    },
+                    child: Text(
+                      'Medium',
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white70),
                     ),
+                    shape: RoundedRectangleBorder(
+                      side: BorderSide(color: Colors.blueAccent, width: 1),
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    fillColor:
+                        _hasBeenPressed2 ? Colors.blueAccent : Colors.black,
+                  ),
+                  RawMaterialButton(
+                    onPressed: () => {
+                      setState(() {
+                        _hasBeenPressed3 = !_hasBeenPressed3;
+                      })
+                    },
+                    child: Text(
+                      'Large',
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white70),
+                    ),
+                    shape: RoundedRectangleBorder(
+                        side: BorderSide(color: Colors.blueAccent, width: 1),
+                        borderRadius: BorderRadius.circular(5)),
+                    fillColor:
+                        _hasBeenPressed3 ? Colors.blueAccent : Colors.black,
                   ),
                 ],
               ),

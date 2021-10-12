@@ -10,8 +10,6 @@ class CartPage extends StatefulWidget {
 class _CartPageState extends State<CartPage> {
   @override
   Widget build(BuildContext context) {
-    double h = MediaQueryData().size.height;
-    double w = MediaQueryData().size.width;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,

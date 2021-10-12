@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project/pages/customisation.dart';
 import 'package:project/pages/payment.dart';
-import 'package:project/pages/favourite.dart';
+import 'package:project/pages/favouritepage.dart';
 import 'package:project/pages/profile.dart';
 import 'package:project/pages/menu.dart';
 
@@ -17,7 +17,7 @@ class _BottomBarNavigationState extends State<BottomBarNavigation> {
   final List<Widget> _children = [
     MenuPage(),
     Customisation(),
-    FavouritePage(),
+    FavouritePages(),
     Payment(),
     Profile(),
   ];
@@ -32,6 +32,7 @@ class _BottomBarNavigationState extends State<BottomBarNavigation> {
 
     return Scaffold(
       bottomNavigationBar: BottomAppBar(
+        color: Colors.grey[700],
         child: SizedBox(
           height: 60,
           child: Row(
@@ -48,7 +49,7 @@ class _BottomBarNavigationState extends State<BottomBarNavigation> {
                         _bottomappbaritems[index],
                         color: index == _currentIndex
                             ? Colors.blueAccent[700]
-                            : null,
+                            : Colors.white,
                       ),
                       index == _currentIndex ? Spacer() : SizedBox(),
                       index == _currentIndex ? _builddot() : SizedBox.shrink(),
@@ -84,7 +85,7 @@ Widget _builddot() {
 final List<IconData> _bottomappbaritems = const <IconData>[
   Icons.food_bank_sharp,
   Icons.category_outlined,
-  Icons.favorite_border,
+  Icons.favorite_rounded,
   Icons.request_page_outlined,
   Icons.person_outline_rounded,
 ];

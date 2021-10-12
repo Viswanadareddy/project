@@ -20,7 +20,7 @@ class _FavouritePagesState extends State<FavouritePages> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      /*appBar: AppBar(
         leading: IconButton(
           onPressed: () => Navigator.of(context).pop(),
           icon: Icon(Icons.arrow_back_ios, color: Colors.black),
@@ -31,12 +31,16 @@ class _FavouritePagesState extends State<FavouritePages> {
               fontSize: 19, fontWeight: FontWeight.w600, color: Colors.black),
         ),
         backgroundColor: Colors.white,
-      ),
+      ),*/
       body: Container(
         padding: EdgeInsets.all(10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            SizedBox(
+              height: 25,
+            ),
+            Text('Favourites'),
             SizedBox(height: 10),
             Expanded(
               child: ListView.builder(
@@ -103,7 +107,7 @@ class _FavouritePagesState extends State<FavouritePages> {
                                 Icon(
                                   Icons.favorite_border,
                                   size: 20,
-                                  color: Colors.,
+                                  color: Colors.blueAccent[700],
                                 ),
                                 SizedBox(
                                   width: 8,
@@ -173,7 +177,7 @@ class _FavouritePagesState extends State<FavouritePages> {
                                 Icon(
                                   Icons.favorite_border,
                                   size: 20,
-                                  color: Colors.white,
+                                  color: Colors.blueAccent[700],
                                 ),
                                 SizedBox(
                                   width: 8,
