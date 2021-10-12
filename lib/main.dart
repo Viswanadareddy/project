@@ -14,6 +14,7 @@ import 'package:project/onbording/MyHomePage.dart';
 import 'package:project/widgets/bottomNavigationBar.dart';
 import 'package:project/pages/customisation.dart';
 import 'package:project/pages/cart.dart';
+import 'package:project/pages/favouritepage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => MaterialApp(
-        home: MyHomePage(),
+        home: FavouritePages(),
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
         scrollBehavior: Mycustomscroll(),
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
           'setting': (context) => Setting(),
           'notifications': (context) => MultiSwitch(),
           'favourite': (context) => FavouritePage(),
+          'favouritepage': (context) => FavouritePages(),
           'bottomNavigationBar': (context) => BottomBarNavigation(),
           'payments': (context) => Payment(),
           'login': (context) => LoginPage(),

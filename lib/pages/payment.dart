@@ -10,14 +10,13 @@ class Payment extends StatefulWidget {
 class _PaymentState extends State<Payment> {
   @override
   Widget build(BuildContext context) {
-    double h = MediaQueryData().size.height;
-    double w = MediaQueryData().size.width;
+    //double h = MediaQueryData().size.height;
+    //double w = MediaQueryData().size.width;
     return Scaffold(
       appBar: AppBar(
           leading: IconButton(
               onPressed: () {
-                //Navigator.pushNamed(context, 'setting');
-                /*Navigator.push(context, RotationRoute(SignInPage()));*/
+                Navigator.pop(context);
               },
               icon: const Icon(Icons.arrow_back_ios, color: Colors.white)),
           backgroundColor: Colors.grey[900],
