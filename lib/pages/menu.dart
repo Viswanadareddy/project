@@ -52,291 +52,190 @@ class _MenuPageState extends State<MenuPage> {
         ],
         automaticallyImplyLeading: false,
       ),
-      body: Container(
-        margin: EdgeInsets.only(top: 8),
-        child: SingleChildScrollView(
-          child: Column(
-            children: <Widget>[
-              Flexible(
-                child: ListView(
-                  physics: ClampingScrollPhysics(),
-                  children: <Widget>[
-                    /*Container(
-                margin: EdgeInsets.only(left: 30, right: 0, top: 0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Text(
-                      'Hey hungry',
-                      style: TextStyle(color: Colors.white, fontSize: 20),
-                    ),
-                    Container(
-                      height: 19,
-                      width: 19,
-                      margin: EdgeInsets.only(right: 20),
-                      child: Icon(Icons.notifications_rounded,
-                          color: Colors.white),
-                    ),
-                  ],
+      body: Column(
+        children: <Widget>[
+          Flexible(
+            child: ListView(
+              children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.only(left: 30, top: 20),
+                  child: Row(
+                    children: <Widget>[
+                      Text(
+                        "Categories",
+                        style: TextStyle(color: Colors.white, fontSize: 19),
+                      ),
+                    ],
+                  ),
                 ),
-              ),*/
-
-                    //Card Section
-
-                    Container(
-                      margin: EdgeInsets.only(left: 30, top: 30, right: 30),
-                      height: 160,
-                      width: 60,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: Colors.white38,
-                      ),
-                      child: Stack(
-                        children: <Widget>[
-                          Positioned(
-                            left: 29,
-                            top: 35,
-                            child: (Text(
-                              'Special',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-                              ),
-                            )),
-                          ),
-                          Positioned(
-                            left: 29,
-                            top: 70,
-                            child: (Text(
-                              '\$39',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-                              ),
-                            )),
-                          ),
-                          Positioned(
-                            left: 29,
-                            top: 110,
-                            child: (Text(
-                              'Chinese Noodles',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-                              ),
-                            )),
-                          ),
-                          Positioned(
-                            height: 125,
-                            width: 125,
-                            top: 20,
-                            left: 190,
-                            child: Container(
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                      "chinesenood.jpg",
-                                    ),
-                                  )),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-
-                    Padding(
-                      padding: EdgeInsets.only(left: 30, top: 20),
-                      child: Row(
-                        children: <Widget>[
-                          Text(
-                            "Categories",
-                            style: TextStyle(color: Colors.white, fontSize: 19),
-                          ),
-                        ],
-                      ),
-                    ),
-
-                    SizedBox(
-                      height: 10,
-                    ),
-                    NewsCarousel(),
-
-                    Padding(
-                      padding: EdgeInsets.only(
-                          left: 30, top: 15, bottom: 15, right: 20),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          Text(
-                            "Recommended",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w500),
-                          ),
-                          TextButton(
-                            style: TextButton.styleFrom(
-                              primary: Colors.blueAccent[700],
-                              minimumSize: Size.zero,
-                              padding: EdgeInsets.all(0),
-                              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                            ),
-                            child: Text('View all'),
-                            onPressed: () {},
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
+                SizedBox(
+                  height: 10,
                 ),
-              ),
-              Flexible(
-                child: ListView.builder(
-                  itemCount: (food.length.toDouble() / 2).toInt(),
-                  itemBuilder: (_, i) {
-                    int a = 2 * i;
-                    int b = 2 * i + 1;
-                    return Row(
-                      children: [
-                        Container(
-                          height:
-                              ((MediaQuery.of(context).size.width - 90) / 2) +
-                                  41,
-                          margin: EdgeInsets.only(left: 20, bottom: 15),
-                          width: (MediaQuery.of(context).size.width - 90) / 2,
-                          //padding: EdgeInsets.all(5),
-                          child: Column(
-                            children: [
-                              Container(
-                                  height:
-                                      (MediaQuery.of(context).size.width - 90) /
-                                          2,
-                                  width:
-                                      (MediaQuery.of(context).size.width - 90) /
-                                          2,
-                                  padding: EdgeInsets.all(1),
-                                  decoration: BoxDecoration(
-                                      image: DecorationImage(
-                                        image: AssetImage(food[a][0]),
-                                        fit: BoxFit.cover,
-                                      ),
-                                      borderRadius: BorderRadius.all(
-                                          Radius.circular(15)))),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              Row(
-                                children: [
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        food[a][1],
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.w500,
-                                            color: Colors.white),
-                                      ),
-                                      SizedBox(
-                                        height: 3,
-                                      ),
-                                      Text(
-                                        food[a][2],
-                                        style: TextStyle(
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.w300,
-                                            color: Colors.white),
-                                      )
-                                    ],
-                                  ),
-                                  //Expanded(child: Container()),
-                                  SizedBox(
-                                    width: 8,
-                                  )
-                                ],
-                              ),
-                            ],
-                          ),
+                NewsCarousel(),
+                Padding(
+                  padding:
+                      EdgeInsets.only(left: 30, top: 15, bottom: 15, right: 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Text(
+                        "Recommended",
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.w500),
+                      ),
+                      TextButton(
+                        style: TextButton.styleFrom(
+                          primary: Colors.blueAccent[700],
+                          minimumSize: Size.zero,
+                          padding: EdgeInsets.all(0),
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                         ),
-                        Container(
-                          height:
-                              ((MediaQuery.of(context).size.width - 90) / 2) +
-                                  31 +
-                                  10,
-                          width: (MediaQuery.of(context).size.width - 90) / 2,
-                          margin:
-                              EdgeInsets.only(left: 30, bottom: 15, right: 20),
-                          //padding: EdgeInsets.all(5),
-                          child: Column(
-                            children: [
-                              Container(
-                                  height:
-                                      (MediaQuery.of(context).size.width - 90) /
-                                          2,
-                                  width:
-                                      (MediaQuery.of(context).size.width - 90) /
-                                          2,
-                                  padding: EdgeInsets.all(1),
-                                  decoration: BoxDecoration(
-                                      image: DecorationImage(
-                                        image: AssetImage(food[b][0]),
-                                        fit: BoxFit.cover,
-                                      ),
-                                      borderRadius: BorderRadius.all(
-                                          Radius.circular(15)))),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              Row(
-                                //mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        food[b][1],
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.w500,
-                                            color: Colors.white),
-                                      ),
-                                      SizedBox(
-                                        height: 3,
-                                      ),
-                                      Text(
-                                        food[b][2],
-                                        style: TextStyle(
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.w300,
-                                            color: Colors.white),
-                                      )
-                                    ],
-                                  ),
-                                  //Expanded(child: Container()),
-                                  SizedBox(
-                                    width: 8,
-                                  )
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    );
-                  },
+                        child: Text('View all'),
+                        onPressed: () {},
+                      ),
+                    ],
+                  ),
                 ),
-              )
-            ],
+              ],
+            ),
           ),
-        ),
+          Flexible(
+            child: ListView.builder(
+              itemCount: (food.length.toDouble() / 2).toInt(),
+              physics: NeverScrollableScrollPhysics(),
+              itemBuilder: (_, i) {
+                int a = 2 * i;
+                int b = 2 * i + 1;
+                return Row(
+                  children: [
+                    Container(
+                      height:
+                          ((MediaQuery.of(context).size.width - 90) / 2) + 41,
+                      margin: EdgeInsets.only(left: 20, bottom: 15),
+                      width: (MediaQuery.of(context).size.width - 90) / 2,
+                      //padding: EdgeInsets.all(5),
+                      child: Column(
+                        children: [
+                          Container(
+                              height:
+                                  (MediaQuery.of(context).size.width - 90) / 2,
+                              width:
+                                  (MediaQuery.of(context).size.width - 90) / 2,
+                              padding: EdgeInsets.all(1),
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    image: AssetImage(food[a][0]),
+                                    fit: BoxFit.cover,
+                                  ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(15)))),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Row(
+                            children: [
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    food[a][1],
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.white),
+                                  ),
+                                  SizedBox(
+                                    height: 3,
+                                  ),
+                                  Text(
+                                    food[a][2],
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w300,
+                                        color: Colors.white),
+                                  )
+                                ],
+                              ),
+                              //Expanded(child: Container()),
+                              SizedBox(
+                                width: 8,
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: ((MediaQuery.of(context).size.width - 90) / 2) +
+                          31 +
+                          10,
+                      width: (MediaQuery.of(context).size.width - 90) / 2,
+                      margin: EdgeInsets.only(left: 30, bottom: 15, right: 20),
+                      //padding: EdgeInsets.all(5),
+                      child: Column(
+                        children: [
+                          Container(
+                              height:
+                                  (MediaQuery.of(context).size.width - 90) / 2,
+                              width:
+                                  (MediaQuery.of(context).size.width - 90) / 2,
+                              padding: EdgeInsets.all(1),
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    image: AssetImage(food[b][0]),
+                                    fit: BoxFit.cover,
+                                  ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(15)))),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Row(
+                            //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    food[b][1],
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.white),
+                                  ),
+                                  SizedBox(
+                                    height: 3,
+                                  ),
+                                  Text(
+                                    food[b][2],
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w300,
+                                        color: Colors.white),
+                                  )
+                                ],
+                              ),
+                              //Expanded(child: Container()),
+                              SizedBox(
+                                width: 8,
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                );
+              },
+            ),
+          )
+        ],
       ),
       backgroundColor: Colors.grey[900],
     );

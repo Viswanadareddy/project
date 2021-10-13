@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class FavouritePages extends StatefulWidget {
-  const FavouritePages({Key? key}) : super(key: key);
+class FavouritePage extends StatefulWidget {
+  const FavouritePage({Key? key}) : super(key: key);
 
   @override
-  _FavouritePagesState createState() => _FavouritePagesState();
+  _FavouritePageState createState() => _FavouritePageState();
 }
 
 List infos = [
@@ -16,7 +16,7 @@ List infos = [
   {0: "assets/burger.jpeg", 1: "Burger", 2: "\$14.99"}
 ];
 
-class _FavouritePagesState extends State<FavouritePages> {
+class _FavouritePageState extends State<FavouritePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

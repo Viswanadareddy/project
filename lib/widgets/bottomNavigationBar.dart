@@ -17,7 +17,7 @@ class _BottomBarNavigationState extends State<BottomBarNavigation> {
   final List<Widget> _children = [
     MenuPage(),
     Customisation(),
-    FavouritePages(),
+    FavouritePage(),
     Payment(),
     Profile(),
   ];

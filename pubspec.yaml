@@ -39,23 +39,9 @@ dependencies:
 
   provider: ^5.0.0
 
-  flutter_staggered_grid_view: ^0.3.3
-
   carousel_pro: ^1.0.0
 
-  auto_route: ^0.3.1
-
-  google_fonts: ^2.1.0
-
-  font_awesome_flutter: ^9.1.0
-
-  flutter_settings_screens: ^0.2.2+1
-
   custom_switch: ^0.0.1
-
-  eva_icons_flutter: ^3.0.2
-
-  flutter_svg: ^0.22.0
 
   carousel_slider: ^4.0.0
 

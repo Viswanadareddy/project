@@ -14,12 +14,8 @@ class _PaymentState extends State<Payment> {
     //double w = MediaQueryData().size.width;
     return Scaffold(
       appBar: AppBar(
-          leading: IconButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: const Icon(Icons.arrow_back_ios, color: Colors.white)),
           backgroundColor: Colors.grey[900],
+          automaticallyImplyLeading: false,
           title: Text(
             "Wallet",
             style: (TextStyle(
