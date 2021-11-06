@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter_settings_screens/flutter_settings_screens.dart';
+//import 'package:flutter_settings_screens/flutter_settings_screens.dart';
 import 'package:project/pages/customisation.dart';
 import 'package:project/pages/login.dart';
 import 'package:project/pages/menu.dart';
@@ -10,7 +10,7 @@ import 'package:project/pages/register.dart';
 import 'package:project/pages/setting.dart';
 import 'package:project/pages/profile.dart';
 import 'package:project/widgets/bottomNavigationBar.dart';
-import 'package:project/pages/customisation.dart';
+//import 'package:project/pages/customisation.dart';
 import 'package:project/pages/cart.dart';
 import 'package:project/pages/favouritepage.dart';
 import 'package:project/pages/onboarding.dart';
